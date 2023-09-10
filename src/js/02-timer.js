@@ -54,7 +54,13 @@ const timer = {
         refs.hours.textContent = `${hours}`;
         refs.minutes.textContent = `${minutes}`;
         refs.seconds.textContent = `${seconds}`;
+        
+         if (deltaTime <= 0) {
+             clearInterval(this.intervalId);
+              alert("Таймер завершено!");
+        }   
         }, 1000);
+        
     },
     stop() {
         if (deltaTime === 0) {
