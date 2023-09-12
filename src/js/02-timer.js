@@ -55,7 +55,7 @@ const timer = {
         refs.minutes.textContent = `${minutes}`;
         refs.seconds.textContent = `${seconds}`;
         
-         if (deltaTime <= 0) {
+         if (deltaTime <= 1) {
              clearInterval(this.intervalId);
               alert("Таймер завершено!");
         }   
